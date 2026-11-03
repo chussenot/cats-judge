@@ -1,5 +1,9 @@
 # cats-judge
 
+<p align="center">
+  <img src="docs/is-this-a-cat.jpg" width="450" alt="A grey British Shorthair stares at the camera under the caption IS THIS A CAT? with a question mark beside it; the bottom line reads cat_present: yes, p = 0.89">
+</p>
+
 Typed, calibrated verdicts on photos from a small local vision model: is
 there a cat in the picture, and what is its main subject, served by
 `transformers serve` and read through a [`jud`](https://github.com/chussenot/judgment)

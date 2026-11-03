@@ -42,3 +42,7 @@ limits the System One wire takes, EXIF orientation applied and stripped.
   [github.com/fastai/imagenette](https://github.com/fastai/imagenette),
   Apache 2.0 as the repository states; the images are a subset of
   ImageNet's validation set, named by their ImageNet file.
+
+The meme at the top of the README, `docs/is-this-a-cat.jpg`, is
+`british-shorthair-89.jpg` with a caption and the verdict the model gave it,
+so it carries the same CC BY-SA 4.0 licence as its source.
