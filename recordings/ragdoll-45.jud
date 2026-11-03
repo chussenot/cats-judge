@@ -1,0 +1,30 @@
+# Recorded answer for case `ragdoll-45`; found by fingerprint.
+apiVersion: jud/v1
+kind: Recording
+metadata:
+  name: ragdoll-45
+  minor: 4
+spec:
+  elapsed_ms: 7633
+  fingerprint: sha256:4ba4783dbe50b86cd7a657b2ed0de4a6adfd396bfa393dc82b05eef6c2c4a080
+  recorded_at: "2026-11-03T14:21:26Z"
+  response:
+    answers:
+      cat_present:
+        noul: 0.8933094143867493
+        type: noul
+      subject:
+        choice: cat
+        confidence: 0.5381912390391032
+        probabilities:
+          cat: 0.6536434292793274
+          dog: 0.0056551238521933556
+          no_animal: 0.10023947060108185
+          other_animal: 0.24046199023723602
+        type: choice
+    model: Qwen/Qwen2-VL-2B-Instruct
+    usage:
+      input_tokens: 676
+      output_tokens: 0
+  rubric: cat-picture
+  server: http://localhost:8002

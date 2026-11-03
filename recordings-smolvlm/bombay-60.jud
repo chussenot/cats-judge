@@ -1,0 +1,30 @@
+# Recorded answer for case `bombay-60`; found by fingerprint.
+apiVersion: jud/v1
+kind: Recording
+metadata:
+  name: bombay-60
+  minor: 4
+spec:
+  elapsed_ms: 13522
+  fingerprint: sha256:76a01f32482c3d47e94456b0fa9bbea9be9457b2edb7455cd53924dde5cd8d18
+  recorded_at: "2026-11-03T14:15:22Z"
+  response:
+    answers:
+      cat_present:
+        noul: 0.9399133324623108
+        type: noul
+      subject:
+        choice: cat
+        confidence: 0.934641440709432
+        probabilities:
+          cat: 0.950981080532074
+          dog: 0.014439884573221207
+          no_animal: 0.03056923858821392
+          other_animal: 0.004009811207652092
+        type: choice
+    model: HuggingFaceTB/SmolVLM-500M-Instruct
+    usage:
+      input_tokens: 1913
+      output_tokens: 0
+  rubric: cat-picture
+  server: http://localhost:8001

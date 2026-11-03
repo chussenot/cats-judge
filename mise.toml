@@ -1,0 +1,36 @@
+[tools]
+# serving: `transformers serve` deps; torch: needed to load models (the CLI is tokenizer-only without it)
+"pipx:transformers" = { version = "latest", extras = ["serving", "torch"] }
+# jud: typed judgments from a .jud rubric (https://github.com/chussenot/judgment)
+"github:chussenot/judgment" = "latest"
+# jaq: the jq the describe task shapes its request with
+jaq = "latest"
+
+[env]
+# The vision model `mise run serve` loads; ~/.config/jud/config.yaml must name the same one.
+CATS_MODEL = "Qwen/Qwen2-VL-2B-Instruct"
+
+[tasks.serve]
+description = "Serve the vision model, OpenAI-compatible API plus POST /v1/systemone on http://localhost:8000"
+# No --decision-config: the default Yes/No and A-D labels are single tokens for this model and the
+# processor's own chat template places the image before the question (README, "Why no decision.json").
+run = "transformers serve $CATS_MODEL --device cpu"
+
+[tasks.judge]
+description = "Judge one photo: is there a cat, and what is the main subject (jud --asset)"
+usage = 'arg "[photo]" default="images/persian-98.jpg"'
+# The state names the image by a reference, `photo`; --asset binds the file to it. jud reads the
+# file, holds it to the wire's limits and sends it as a data URL in the shared `images` array
+# (shared_images: data-urls in ~/.config/jud/config.yaml), the shape `transformers serve` takes.
+run = '''echo '{"photo": "photo"}' | jud --asset "photo=$usage_photo" cat.jud'''
+
+[tasks.describe]
+description = "Ask the same model to describe a photo on the chat endpoint, to see what the System One wire does not generate"
+usage = 'arg "[photo]" default="images/persian-98.jpg"'
+run = '''
+data="data:image/jpeg;base64,$(base64 -w0 "$usage_photo")"
+jaq -n --arg model "$CATS_MODEL" --arg data "$data" '{model: $model, stream: false, max_tokens: 48, temperature: 0,
+  messages: [{role: "user", content: [{type: "image_url", image_url: {url: $data}}, {type: "text", text: "Describe this picture in one sentence."}]}]}' \
+| curl -sf localhost:8000/v1/chat/completions -H "Content-Type: application/json" -d @- \
+| jaq -r .choices[0].message.content
+'''

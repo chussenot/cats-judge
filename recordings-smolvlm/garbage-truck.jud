@@ -1,0 +1,30 @@
+# Recorded answer for case `garbage-truck`; found by fingerprint.
+apiVersion: jud/v1
+kind: Recording
+metadata:
+  name: garbage-truck
+  minor: 4
+spec:
+  elapsed_ms: 17650
+  fingerprint: sha256:f501ae0a62acf5d0dd903835dbd396b29b0d837ab9600fb51d34e90d586dd376
+  recorded_at: "2026-11-03T14:18:33Z"
+  response:
+    answers:
+      cat_present:
+        noul: 0.11279541254043579
+        type: noul
+      subject:
+        choice: no_animal
+        confidence: 0.5989642937978109
+        probabilities:
+          cat: 0.006439622957259417
+          dog: 0.0028575656469911337
+          no_animal: 0.6992232203483582
+          other_animal: 0.29147958755493164
+        type: choice
+    model: HuggingFaceTB/SmolVLM-500M-Instruct
+    usage:
+      input_tokens: 2443
+      output_tokens: 0
+  rubric: cat-picture
+  server: http://localhost:8001

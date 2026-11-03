@@ -1,0 +1,30 @@
+# Recorded answer for case `great-pyrenees-22`; found by fingerprint.
+apiVersion: jud/v1
+kind: Recording
+metadata:
+  name: great-pyrenees-22
+  minor: 4
+spec:
+  elapsed_ms: 13726
+  fingerprint: sha256:b4ad3c27a0e0ffef171dc7722dfbdccb92ff847e52c5452c185a14a91fb616a5
+  recorded_at: "2026-11-03T14:16:35Z"
+  response:
+    answers:
+      cat_present:
+        noul: 0.14033624529838562
+        type: noul
+      subject:
+        choice: dog
+        confidence: 0.9543272654215494
+        probabilities:
+          cat: 0.008098267950117588
+          dog: 0.9657454490661621
+          no_animal: 0.020043406635522842
+          other_animal: 0.0061128935776650906
+        type: choice
+    model: HuggingFaceTB/SmolVLM-500M-Instruct
+    usage:
+      input_tokens: 1919
+      output_tokens: 0
+  rubric: cat-picture
+  server: http://localhost:8001

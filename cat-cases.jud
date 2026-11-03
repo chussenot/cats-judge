@@ -1,0 +1,174 @@
+# Labelled photos for cat.jud: twelve domestic cats, seven dogs (the hard
+# negatives), one fish and six scenes with no animal. Each case names its
+# image once, in `assets`, by a path relative to this file; the reference
+# is what the state carries. Sources and licences: images/SOURCES.md.
+#
+#   jud check cat.jud cat-cases.jud
+#   jud record --out recordings cat.jud cat-cases.jud    # asks the server once per case
+#   jud eval --replay recordings cat.jud cat-cases.jud   # grades, no server
+#   jud tune --replay recordings cat.jud cat-cases.jud   # proposes the bars
+apiVersion: jud/v1
+kind: Cases
+metadata:
+  name: cat-picture-cases
+  minor: 4
+  description: Twenty-six photos labelled with whether a cat is in them and what the main subject is.
+spec:
+  rubric: cat-picture
+  cases:
+    - id: persian-98
+      state: {photo: persian-98}
+      assets:
+        persian-98: {type: image, path: images/persian-98.jpg}
+      expect: {cat_present: true, subject: cat}
+      tags: [cat]
+    - id: sphynx-59
+      state: {photo: sphynx-59}
+      assets:
+        sphynx-59: {type: image, path: images/sphynx-59.jpg}
+      expect: {cat_present: true, subject: cat}
+      tags: [cat]
+    - id: abyssinian-57
+      state: {photo: abyssinian-57}
+      assets:
+        abyssinian-57: {type: image, path: images/abyssinian-57.jpg}
+      expect: {cat_present: true, subject: cat}
+      tags: [cat]
+    - id: british-shorthair-269
+      state: {photo: british-shorthair-269}
+      assets:
+        british-shorthair-269: {type: image, path: images/british-shorthair-269.jpg}
+      expect: {cat_present: true, subject: cat}
+      tags: [cat]
+    - id: sphynx-239
+      state: {photo: sphynx-239}
+      assets:
+        sphynx-239: {type: image, path: images/sphynx-239.jpg}
+      expect: {cat_present: true, subject: cat}
+      tags: [cat]
+    - id: british-shorthair-89
+      state: {photo: british-shorthair-89}
+      assets:
+        british-shorthair-89: {type: image, path: images/british-shorthair-89.jpg}
+      expect: {cat_present: true, subject: cat}
+      tags: [cat]
+    - id: birman-62
+      state: {photo: birman-62}
+      assets:
+        birman-62: {type: image, path: images/birman-62.jpg}
+      expect: {cat_present: true, subject: cat}
+      tags: [cat]
+    - id: ragdoll-45
+      state: {photo: ragdoll-45}
+      assets:
+        ragdoll-45: {type: image, path: images/ragdoll-45.jpg}
+      expect: {cat_present: true, subject: cat}
+      tags: [cat]
+    - id: british-shorthair-70
+      state: {photo: british-shorthair-70}
+      assets:
+        british-shorthair-70: {type: image, path: images/british-shorthair-70.jpg}
+      expect: {cat_present: true, subject: cat}
+      tags: [cat]
+    - id: persian-265
+      state: {photo: persian-265}
+      assets:
+        persian-265: {type: image, path: images/persian-265.jpg}
+      expect: {cat_present: true, subject: cat}
+      tags: [cat]
+    - id: siamese-73
+      state: {photo: siamese-73}
+      assets:
+        siamese-73: {type: image, path: images/siamese-73.jpg}
+      expect: {cat_present: true, subject: cat}
+      tags: [cat]
+    - id: bombay-60
+      state: {photo: bombay-60}
+      assets:
+        bombay-60: {type: image, path: images/bombay-60.jpg}
+      expect: {cat_present: true, subject: cat}
+      tags: [cat]
+    - id: english-springer
+      state: {photo: english-springer}
+      assets:
+        english-springer: {type: image, path: images/english-springer.jpg}
+      expect: {cat_present: false, subject: dog}
+      tags: [dog]
+    - id: newfoundland-31
+      state: {photo: newfoundland-31}
+      assets:
+        newfoundland-31: {type: image, path: images/newfoundland-31.jpg}
+      expect: {cat_present: false, subject: dog}
+      tags: [dog]
+    - id: pug-57
+      state: {photo: pug-57}
+      assets:
+        pug-57: {type: image, path: images/pug-57.jpg}
+      expect: {cat_present: false, subject: dog}
+      tags: [dog]
+    - id: american-bulldog-80
+      state: {photo: american-bulldog-80}
+      assets:
+        american-bulldog-80: {type: image, path: images/american-bulldog-80.jpg}
+      expect: {cat_present: false, subject: dog}
+      tags: [dog]
+    - id: great-pyrenees-22
+      state: {photo: great-pyrenees-22}
+      assets:
+        great-pyrenees-22: {type: image, path: images/great-pyrenees-22.jpg}
+      expect: {cat_present: false, subject: dog}
+      tags: [dog]
+    - id: havanese-97
+      state: {photo: havanese-97}
+      assets:
+        havanese-97: {type: image, path: images/havanese-97.jpg}
+      expect: {cat_present: false, subject: dog}
+      tags: [dog]
+    - id: staffordshire-bull-terrier-30
+      state: {photo: staffordshire-bull-terrier-30}
+      assets:
+        staffordshire-bull-terrier-30: {type: image, path: images/staffordshire-bull-terrier-30.jpg}
+      expect: {cat_present: false, subject: dog}
+      tags: [dog]
+    - id: tench
+      state: {photo: tench}
+      assets:
+        tench: {type: image, path: images/tench.jpg}
+      expect: {cat_present: false, subject: other_animal}
+      tags: [other_animal]
+    - id: cassette-player
+      state: {photo: cassette-player}
+      assets:
+        cassette-player: {type: image, path: images/cassette-player.jpg}
+      expect: {cat_present: false, subject: no_animal}
+      tags: [no_animal]
+    - id: church
+      state: {photo: church}
+      assets:
+        church: {type: image, path: images/church.jpg}
+      expect: {cat_present: false, subject: no_animal}
+      tags: [no_animal]
+    - id: french-horn
+      state: {photo: french-horn}
+      assets:
+        french-horn: {type: image, path: images/french-horn.jpg}
+      expect: {cat_present: false, subject: no_animal}
+      tags: [no_animal]
+    - id: garbage-truck
+      state: {photo: garbage-truck}
+      assets:
+        garbage-truck: {type: image, path: images/garbage-truck.jpg}
+      expect: {cat_present: false, subject: no_animal}
+      tags: [no_animal]
+    - id: gas-pump
+      state: {photo: gas-pump}
+      assets:
+        gas-pump: {type: image, path: images/gas-pump.jpg}
+      expect: {cat_present: false, subject: no_animal}
+      tags: [no_animal]
+    - id: parachute
+      state: {photo: parachute}
+      assets:
+        parachute: {type: image, path: images/parachute.jpg}
+      expect: {cat_present: false, subject: no_animal}
+      tags: [no_animal]

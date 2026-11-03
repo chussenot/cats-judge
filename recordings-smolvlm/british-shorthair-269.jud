@@ -1,0 +1,30 @@
+# Recorded answer for case `british-shorthair-269`; found by fingerprint.
+apiVersion: jud/v1
+kind: Recording
+metadata:
+  name: british-shorthair-269
+  minor: 4
+spec:
+  elapsed_ms: 15543
+  fingerprint: sha256:928408051cba0e1fdbd98071d612bbb9cf1052fe1b59d523b623aeae6c50ca2b
+  recorded_at: "2026-11-03T14:13:23Z"
+  response:
+    answers:
+      cat_present:
+        noul: 0.9263036847114563
+        type: noul
+      subject:
+        choice: cat
+        confidence: 0.850839376449585
+        probabilities:
+          cat: 0.8881295323371887
+          dog: 0.02681918814778328
+          no_animal: 0.07760389149188995
+          other_animal: 0.007447419222444296
+        type: choice
+    model: HuggingFaceTB/SmolVLM-500M-Instruct
+    usage:
+      input_tokens: 2457
+      output_tokens: 0
+  rubric: cat-picture
+  server: http://localhost:8001

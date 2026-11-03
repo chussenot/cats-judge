@@ -1,0 +1,30 @@
+# Recorded answer for case `persian-265`; found by fingerprint.
+apiVersion: jud/v1
+kind: Recording
+metadata:
+  name: persian-265
+  minor: 4
+spec:
+  elapsed_ms: 6085
+  fingerprint: sha256:d660e7e01eb75fcb72a5ef5cd2c24fce6273af278a2d2555bdf1b6d03b920788
+  recorded_at: "2026-11-03T14:21:39Z"
+  response:
+    answers:
+      cat_present:
+        noul: 0.8933094143867493
+        type: noul
+      subject:
+        choice: cat
+        confidence: 0.4454222520192464
+        probabilities:
+          cat: 0.5840666890144348
+          dog: 0.007352314889431
+          no_animal: 0.05432666838169098
+          other_animal: 0.3542543649673462
+        type: choice
+    model: Qwen/Qwen2-VL-2B-Instruct
+    usage:
+      input_tokens: 548
+      output_tokens: 0
+  rubric: cat-picture
+  server: http://localhost:8002

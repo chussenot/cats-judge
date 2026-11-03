@@ -1,0 +1,30 @@
+# Recorded answer for case `birman-62`; found by fingerprint.
+apiVersion: jud/v1
+kind: Recording
+metadata:
+  name: birman-62
+  minor: 4
+spec:
+  elapsed_ms: 13268
+  fingerprint: sha256:4acd96b81a38bc48efd15f012df4d3d14913a1ceda4c9215d6965800091d39f1
+  recorded_at: "2026-11-03T14:14:10Z"
+  response:
+    answers:
+      cat_present:
+        noul: 0.9304582476615906
+        type: noul
+      subject:
+        choice: cat
+        confidence: 0.6775775750478109
+        probabilities:
+          cat: 0.7581831812858582
+          dog: 0.03228733316063881
+          no_animal: 0.19169872999191284
+          other_animal: 0.017830759286880493
+        type: choice
+    model: HuggingFaceTB/SmolVLM-500M-Instruct
+    usage:
+      input_tokens: 1915
+      output_tokens: 0
+  rubric: cat-picture
+  server: http://localhost:8001

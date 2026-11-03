@@ -1,0 +1,30 @@
+# Recorded answer for case `siamese-73`; found by fingerprint.
+apiVersion: jud/v1
+kind: Recording
+metadata:
+  name: siamese-73
+  minor: 4
+spec:
+  elapsed_ms: 6822
+  fingerprint: sha256:ba388e67eb10c55df5a59182d1081b3e222bf363e884d7738a576249a6681b87
+  recorded_at: "2026-11-03T14:21:46Z"
+  response:
+    answers:
+      cat_present:
+        noul: 0.9149009585380554
+        type: noul
+      subject:
+        choice: cat
+        confidence: 0.7054317792256674
+        probabilities:
+          cat: 0.7790738344192505
+          dog: 0.003183896653354168
+          no_animal: 0.02076161466538906
+          other_animal: 0.19698071479797363
+        type: choice
+    model: Qwen/Qwen2-VL-2B-Instruct
+    usage:
+      input_tokens: 642
+      output_tokens: 0
+  rubric: cat-picture
+  server: http://localhost:8002

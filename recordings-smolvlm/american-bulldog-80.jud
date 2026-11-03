@@ -1,0 +1,30 @@
+# Recorded answer for case `american-bulldog-80`; found by fingerprint.
+apiVersion: jud/v1
+kind: Recording
+metadata:
+  name: american-bulldog-80
+  minor: 4
+spec:
+  elapsed_ms: 13730
+  fingerprint: sha256:550f5341c7b2942417c64a7d544cd353358c2acff621c8106e860cb20064e62b
+  recorded_at: "2026-11-03T14:16:21Z"
+  response:
+    answers:
+      cat_present:
+        noul: 0.24508501589298248
+        type: noul
+      subject:
+        choice: dog
+        confidence: 0.9943063259124756
+        probabilities:
+          cat: 0.0014063193229958415
+          dog: 0.9957297444343567
+          no_animal: 0.000752748514059931
+          other_animal: 0.002111135283485055
+        type: choice
+    model: HuggingFaceTB/SmolVLM-500M-Instruct
+    usage:
+      input_tokens: 1919
+      output_tokens: 0
+  rubric: cat-picture
+  server: http://localhost:8001

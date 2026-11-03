@@ -1,0 +1,30 @@
+# Recorded answer for case `pug-57`; found by fingerprint.
+apiVersion: jud/v1
+kind: Recording
+metadata:
+  name: pug-57
+  minor: 4
+spec:
+  elapsed_ms: 7224
+  fingerprint: sha256:957ef6db4b4853ea28b9d424970c981f479c385176b5c81f6d8b413b98127d84
+  recorded_at: "2026-11-03T14:22:12Z"
+  response:
+    answers:
+      cat_present:
+        noul: 0.08509904891252518
+        type: noul
+      subject:
+        choice: dog
+        confidence: 0.2496573527654012
+        probabilities:
+          cat: 0.014961632899940014
+          dog: 0.4372430145740509
+          no_animal: 0.1105523481965065
+          other_animal: 0.4372430145740509
+        type: choice
+    model: Qwen/Qwen2-VL-2B-Instruct
+    usage:
+      input_tokens: 640
+      output_tokens: 0
+  rubric: cat-picture
+  server: http://localhost:8002

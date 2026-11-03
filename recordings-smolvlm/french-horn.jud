@@ -1,0 +1,30 @@
+# Recorded answer for case `french-horn`; found by fingerprint.
+apiVersion: jud/v1
+kind: Recording
+metadata:
+  name: french-horn
+  minor: 4
+spec:
+  elapsed_ms: 19366
+  fingerprint: sha256:15342b0cf11818c0f98d3c3926ab571b0d64160064a7c44e1208abca16a00ad6
+  recorded_at: "2026-11-03T14:18:15Z"
+  response:
+    answers:
+      cat_present:
+        noul: 0.01912403665482998
+        type: noul
+      subject:
+        choice: no_animal
+        confidence: 0.46770572662353516
+        probabilities:
+          cat: 0.015517642721533775
+          dog: 0.019312020391225815
+          no_animal: 0.6007792949676514
+          other_animal: 0.3643910586833954
+        type: choice
+    model: HuggingFaceTB/SmolVLM-500M-Instruct
+    usage:
+      input_tokens: 2441
+      output_tokens: 0
+  rubric: cat-picture
+  server: http://localhost:8001

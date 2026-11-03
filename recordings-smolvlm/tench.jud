@@ -1,0 +1,30 @@
+# Recorded answer for case `tench`; found by fingerprint.
+apiVersion: jud/v1
+kind: Recording
+metadata:
+  name: tench
+  minor: 4
+spec:
+  elapsed_ms: 17148
+  fingerprint: sha256:8db36a78d4594e5d32c977eef765e50b580fd22581902324a190ed2ead891dc7
+  recorded_at: "2026-11-03T14:17:20Z"
+  response:
+    answers:
+      cat_present:
+        noul: 0.10087861865758896
+        type: noul
+      subject:
+        choice: no_animal
+        confidence: 0.42716137568155926
+        probabilities:
+          cat: 0.005591720808297396
+          dog: 0.0067449030466377735
+          no_animal: 0.5703710317611694
+          other_animal: 0.41729238629341125
+        type: choice
+    model: HuggingFaceTB/SmolVLM-500M-Instruct
+    usage:
+      input_tokens: 2437
+      output_tokens: 0
+  rubric: cat-picture
+  server: http://localhost:8001

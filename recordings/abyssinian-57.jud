@@ -1,0 +1,30 @@
+# Recorded answer for case `abyssinian-57`; found by fingerprint.
+apiVersion: jud/v1
+kind: Recording
+metadata:
+  name: abyssinian-57
+  minor: 4
+spec:
+  elapsed_ms: 7306
+  fingerprint: sha256:d4dfaf14889dc84f4bf16a0115ce34c94915da039bb9dba3d943052fb44d4ff3
+  recorded_at: "2026-11-03T14:20:43Z"
+  response:
+    answers:
+      cat_present:
+        noul: 0.9046505093574524
+        type: noul
+      subject:
+        choice: cat
+        confidence: 0.5624681313832601
+        probabilities:
+          cat: 0.6718510985374451
+          dog: 0.005129646509885788
+          no_animal: 0.04295000061392784
+          other_animal: 0.2800692021846771
+        type: choice
+    model: Qwen/Qwen2-VL-2B-Instruct
+    usage:
+      input_tokens: 680
+      output_tokens: 0
+  rubric: cat-picture
+  server: http://localhost:8002

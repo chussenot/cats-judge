@@ -1,0 +1,30 @@
+# Recorded answer for case `persian-98`; found by fingerprint.
+apiVersion: jud/v1
+kind: Recording
+metadata:
+  name: persian-98
+  minor: 4
+spec:
+  elapsed_ms: 13626
+  fingerprint: sha256:3a2180fb705afebef249b9190d7bb018d13f7caccaadceaff76d57aaaf62e259
+  recorded_at: "2026-11-03T14:12:35Z"
+  response:
+    answers:
+      cat_present:
+        noul: 0.949669361114502
+        type: noul
+      subject:
+        choice: cat
+        confidence: 0.8709917863210043
+        probabilities:
+          cat: 0.9032438397407532
+          dog: 0.019955256953835487
+          no_animal: 0.06543076783418655
+          other_animal: 0.011370162479579449
+        type: choice
+    model: HuggingFaceTB/SmolVLM-500M-Instruct
+    usage:
+      input_tokens: 1915
+      output_tokens: 0
+  rubric: cat-picture
+  server: http://localhost:8001

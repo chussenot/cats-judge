@@ -1,0 +1,30 @@
+# Recorded answer for case `newfoundland-31`; found by fingerprint.
+apiVersion: jud/v1
+kind: Recording
+metadata:
+  name: newfoundland-31
+  minor: 4
+spec:
+  elapsed_ms: 14023
+  fingerprint: sha256:79dcca079dd65577db2176ea7375bef0b461ddd8013f7f7e62682c83b855a129
+  recorded_at: "2026-11-03T14:15:54Z"
+  response:
+    answers:
+      cat_present:
+        noul: 0.24508501589298248
+        type: noul
+      subject:
+        choice: dog
+        confidence: 0.7993022600809733
+        probabilities:
+          cat: 0.011744329705834389
+          dog: 0.84947669506073
+          no_animal: 0.10145552456378937
+          other_animal: 0.037323400378227234
+        type: choice
+    model: HuggingFaceTB/SmolVLM-500M-Instruct
+    usage:
+      input_tokens: 1913
+      output_tokens: 0
+  rubric: cat-picture
+  server: http://localhost:8001

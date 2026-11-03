@@ -1,0 +1,30 @@
+# Recorded answer for case `church`; found by fingerprint.
+apiVersion: jud/v1
+kind: Recording
+metadata:
+  name: church
+  minor: 4
+spec:
+  elapsed_ms: 3120
+  fingerprint: sha256:a5438e2d9b73cfd263ce13616a21e4867e2426dd91a4d5bf01786a90b0b05d99
+  recorded_at: "2026-11-03T14:22:50Z"
+  response:
+    answers:
+      cat_present:
+        noul: 0.13296423852443695
+        type: noul
+      subject:
+        choice: no_animal
+        confidence: 0.95949387550354
+        probabilities:
+          cat: 0.004490233026444912
+          dog: 0.003086089389398694
+          no_animal: 0.969620406627655
+          other_animal: 0.022803286090493202
+        type: choice
+    model: Qwen/Qwen2-VL-2B-Instruct
+    usage:
+      input_tokens: 464
+      output_tokens: 0
+  rubric: cat-picture
+  server: http://localhost:8002

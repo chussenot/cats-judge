@@ -1,0 +1,30 @@
+# Recorded answer for case `gas-pump`; found by fingerprint.
+apiVersion: jud/v1
+kind: Recording
+metadata:
+  name: gas-pump
+  minor: 4
+spec:
+  elapsed_ms: 17714
+  fingerprint: sha256:ed333c3b1f8a46f3497bc808b8f8f02c0a0c7f3d3f7e1c90d85e87193666db90
+  recorded_at: "2026-11-03T14:18:50Z"
+  response:
+    answers:
+      cat_present:
+        noul: 0.10087861865758896
+        type: noul
+      subject:
+        choice: other_animal
+        confidence: 0.5265657107035319
+        probabilities:
+          cat: 0.003716873936355114
+          dog: 0.046718161553144455
+          no_animal: 0.30464065074920654
+          other_animal: 0.6449242830276489
+        type: choice
+    model: HuggingFaceTB/SmolVLM-500M-Instruct
+    usage:
+      input_tokens: 2441
+      output_tokens: 0
+  rubric: cat-picture
+  server: http://localhost:8001

@@ -1,0 +1,30 @@
+# Recorded answer for case `english-springer`; found by fingerprint.
+apiVersion: jud/v1
+kind: Recording
+metadata:
+  name: english-springer
+  minor: 4
+spec:
+  elapsed_ms: 5393
+  fingerprint: sha256:eafd025c757b37085f1d2a53698ff38aff09625c46df39b4e84519a4cd756077
+  recorded_at: "2026-11-03T14:21:58Z"
+  response:
+    answers:
+      cat_present:
+        noul: 0.08509904891252518
+        type: noul
+      subject:
+        choice: other_animal
+        confidence: 0.3502620855967204
+        probabilities:
+          cat: 0.009390365332365036
+          dog: 0.39928847551345825
+          no_animal: 0.07862456887960434
+          other_animal: 0.5126965641975403
+        type: choice
+    model: Qwen/Qwen2-VL-2B-Instruct
+    usage:
+      input_tokens: 536
+      output_tokens: 0
+  rubric: cat-picture
+  server: http://localhost:8002

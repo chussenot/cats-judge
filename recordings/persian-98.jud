@@ -1,0 +1,30 @@
+# Recorded answer for case `persian-98`; found by fingerprint.
+apiVersion: jud/v1
+kind: Recording
+metadata:
+  name: persian-98
+  minor: 4
+spec:
+  elapsed_ms: 6980
+  fingerprint: sha256:3a2180fb705afebef249b9190d7bb018d13f7caccaadceaff76d57aaaf62e259
+  recorded_at: "2026-11-03T14:20:28Z"
+  response:
+    answers:
+      cat_present:
+        noul: 0.9149009585380554
+        type: noul
+      subject:
+        choice: cat
+        confidence: 0.7146255175272623
+        probabilities:
+          cat: 0.7859691381454468
+          dog: 0.0041243876330554485
+          no_animal: 0.034533075988292694
+          other_animal: 0.17537342011928558
+        type: choice
+    model: Qwen/Qwen2-VL-2B-Instruct
+    usage:
+      input_tokens: 676
+      output_tokens: 0
+  rubric: cat-picture
+  server: http://localhost:8002

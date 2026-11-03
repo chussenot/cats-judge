@@ -1,0 +1,30 @@
+# Recorded answer for case `cassette-player`; found by fingerprint.
+apiVersion: jud/v1
+kind: Recording
+metadata:
+  name: cassette-player
+  minor: 4
+spec:
+  elapsed_ms: 17298
+  fingerprint: sha256:b1f720c2e46f1cf7c6a8bea9c3fc2979ce273db55562493cd7199362aabd08dc
+  recorded_at: "2026-11-03T14:17:37Z"
+  response:
+    answers:
+      cat_present:
+        noul: 0.09009299427270889
+        type: noul
+      subject:
+        choice: other_animal
+        confidence: 0.2461475928624471
+        probabilities:
+          cat: 0.05525455251336098
+          dog: 0.07552401721477509
+          no_animal: 0.4346106946468353
+          other_animal: 0.4346106946468353
+        type: choice
+    model: HuggingFaceTB/SmolVLM-500M-Instruct
+    usage:
+      input_tokens: 2443
+      output_tokens: 0
+  rubric: cat-picture
+  server: http://localhost:8001

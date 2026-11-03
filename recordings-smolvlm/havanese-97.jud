@@ -1,0 +1,30 @@
+# Recorded answer for case `havanese-97`; found by fingerprint.
+apiVersion: jud/v1
+kind: Recording
+metadata:
+  name: havanese-97
+  minor: 4
+spec:
+  elapsed_ms: 14376
+  fingerprint: sha256:504484bf13c6adb5ef38e49949288c3a6d128087d81bfeb83ac70d43f7da10ff
+  recorded_at: "2026-11-03T14:16:49Z"
+  response:
+    answers:
+      cat_present:
+        noul: 0.36296921968460083
+        type: noul
+      subject:
+        choice: dog
+        confidence: 0.9569647312164307
+        probabilities:
+          cat: 0.011443781666457653
+          dog: 0.967723548412323
+          no_animal: 0.012967502698302269
+          other_animal: 0.007865187712013721
+        type: choice
+    model: HuggingFaceTB/SmolVLM-500M-Instruct
+    usage:
+      input_tokens: 1913
+      output_tokens: 0
+  rubric: cat-picture
+  server: http://localhost:8001

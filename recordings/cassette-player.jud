@@ -1,0 +1,30 @@
+# Recorded answer for case `cassette-player`; found by fingerprint.
+apiVersion: jud/v1
+kind: Recording
+metadata:
+  name: cassette-player
+  minor: 4
+spec:
+  elapsed_ms: 3741
+  fingerprint: sha256:b1f720c2e46f1cf7c6a8bea9c3fc2979ce273db55562493cd7199362aabd08dc
+  recorded_at: "2026-11-03T14:22:46Z"
+  response:
+    answers:
+      cat_present:
+        noul: 0.13296423852443695
+        type: noul
+      subject:
+        choice: no_animal
+        confidence: 0.9652744928995768
+        probabilities:
+          cat: 0.005791353527456522
+          dog: 0.0024141953326761723
+          no_animal: 0.9739558696746826
+          other_animal: 0.017838625237345695
+        type: choice
+    model: Qwen/Qwen2-VL-2B-Instruct
+    usage:
+      input_tokens: 536
+      output_tokens: 0
+  rubric: cat-picture
+  server: http://localhost:8002

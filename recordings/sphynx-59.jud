@@ -1,0 +1,30 @@
+# Recorded answer for case `sphynx-59`; found by fingerprint.
+apiVersion: jud/v1
+kind: Recording
+metadata:
+  name: sphynx-59
+  minor: 4
+spec:
+  elapsed_ms: 7642
+  fingerprint: sha256:89767bb0fe38ba8aac33d38fe0e0ee19a44f15f68ac43a8887064e68e2259512
+  recorded_at: "2026-11-03T14:20:36Z"
+  response:
+    answers:
+      cat_present:
+        noul: 0.8807970285415649
+        type: noul
+      subject:
+        choice: other_animal
+        confidence: 0.6263666947682699
+        probabilities:
+          cat: 0.20621900260448456
+          dog: 0.007056425791233778
+          no_animal: 0.0669495090842247
+          other_animal: 0.7197750210762024
+        type: choice
+    model: Qwen/Qwen2-VL-2B-Instruct
+    usage:
+      input_tokens: 716
+      output_tokens: 0
+  rubric: cat-picture
+  server: http://localhost:8002

@@ -1,0 +1,62 @@
+# The decision a vision model makes about one photo, as a jud rubric: is
+# there a cat in it, and what is the main subject when there is not. Answered
+# by `transformers serve` at POST /v1/systemone (mise run serve;
+# ~/.config/jud/config.yaml names it, with `shared_images: data-urls`):
+#
+#   echo '{"photo": "p"}' | jud --asset p=images/persian-98.jpg cat.jud
+#
+# The state carries a reference, `photo`; --asset binds the file to it and
+# the questions name it in backticks (docs/concepts/visual-judgments.md).
+# Format: https://github.com/chussenot/judgment/blob/main/docs/reference/jud-format.md
+apiVersion: jud/v1
+kind: Rubric
+metadata:
+  name: cat-picture
+  minor: 4
+  version: 1
+  description: >-
+    Whether a photo shows a domestic cat, and what its main subject is when
+    it does not.
+spec:
+  questions:
+    cat_present:
+      type: noul
+      instructions: Is there a cat in `photo`?
+      criteria:
+        true: a domestic cat (Felis catus), any breed, kitten or adult, whole or in part, the main subject or not
+        false: no cat; a dog, another animal, a toy, a drawing or a scene without one
+    subject:
+      type: choice
+      instructions: What is the main subject of `photo`?
+      criteria:
+        cat: a domestic cat
+        dog: a dog
+        other_animal: an animal that is neither a cat nor a dog
+        no_animal: no animal; an object, a place, a person or a scene
+
+  # Gates: where an answer becomes an action. The bars come from `jud tune`
+  # over the recordings under recordings/ (26 cases: a guess with a number
+  # on it, as tune warns; re-tune when the cases grow).
+  policy:
+    cat_present:
+      threshold: 0.5
+      note: >-
+        the model put every cat at 0.82 or more and every other photo at
+        0.13 or less; tune proposed 0.15 (best F1, ties to the lower bar),
+        0.5 sits in the middle of that gap and is the policy choice
+    subject:
+      confidence: 0.8
+      note: >-
+        lowest bar at 95% accuracy; covers 6 of 26 labelled cases. The model
+        is weak on this question (accuracy 0.85, confidence 0.57 when wrong),
+        so the gate defers most answers; read it as a diagnostic beside
+        cat_present, not as the verdict
+
+  tuning:
+    cases: sha256:8d9f3f1eee06f1206aeac83f2959c587f489cb6501895ad073f372e2b49585b8
+    model: Qwen/Qwen2-VL-2B-Instruct
+    server: http://localhost:8002
+    tuned_at: "2026-11-03T14:23:43Z"
+    labelled:
+      cat_present: 26
+      subject: 26

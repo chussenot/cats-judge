@@ -1,0 +1,30 @@
+# Recorded answer for case `parachute`; found by fingerprint.
+apiVersion: jud/v1
+kind: Recording
+metadata:
+  name: parachute
+  minor: 4
+spec:
+  elapsed_ms: 18069
+  fingerprint: sha256:4ddcc061f67b4c044b19379781a9a9f8072ddadf1770dba92785ae4329ffacda
+  recorded_at: "2026-11-03T14:19:08Z"
+  response:
+    answers:
+      cat_present:
+        noul: 0.09534946084022522
+        type: noul
+      subject:
+        choice: other_animal
+        confidence: 0.2755558490753174
+        probabilities:
+          cat: 0.01663408987224102
+          dog: 0.07003213465213776
+          no_animal: 0.45666688680648804
+          other_animal: 0.45666688680648804
+        type: choice
+    model: HuggingFaceTB/SmolVLM-500M-Instruct
+    usage:
+      input_tokens: 2439
+      output_tokens: 0
+  rubric: cat-picture
+  server: http://localhost:8001
