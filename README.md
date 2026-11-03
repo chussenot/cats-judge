@@ -16,6 +16,9 @@ which judges text: the same wire, the same loop, with an image in the
 request. What changes when a request carries an image is on
 [Visual judgments](https://github.com/chussenot/judgment/blob/main/docs/concepts/visual-judgments.md).
 
+<img width="1890" height="882" alt="image" src="https://github.com/user-attachments/assets/b1db35c1-364a-4a88-9996-c7e6f8c6727c" />
+
+
 ## Setup
 
 [mise](https://mise.jdx.dev) installs the tools and runs the tasks:
